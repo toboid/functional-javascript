@@ -4,7 +4,7 @@ function duckCount() {
     return duckCount.apply(null, [].slice.call(arguments, 1)) + result
 }
 
-// Official
+// Model answer
 /*
 function duckCount() {
     return Array.prototype.slice.call(arguments).filter(function(obj) {
