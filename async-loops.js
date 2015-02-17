@@ -1,6 +1,7 @@
 function loadUsers(userIds, load, done) {
-    var loaded = 0;
-    var users = [];
+    var loaded = 0,
+        users = [];
+
     userIds.forEach(function (id, idx) {
         load(id, function (user) {
             users[idx] = user;
@@ -11,4 +12,4 @@ function loadUsers(userIds, load, done) {
     });
 }
 
-module.exports = loadUsers
+module.exports = loadUsers;

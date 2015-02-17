@@ -10,25 +10,27 @@ function curryN(fn, n) {
     }
 }
 
-module.exports = curryN
+module.exports = curryN;
 
-//// Model answer.
-//function curryN(fn, n) {
-//    if (typeof n !== 'number') n = fn.length;
-//
-//    function getCurriedFn(prev) {
-//        return function(arg) {
-//            var args = prev.concat(arg);
-//
-//            if (args.length < n)
-//                return getCurriedFn(args);
-//            else
-//                return fn.apply(this, args)
-//        };
-//    }
-//
-//    return getCurriedFn([])
-//}
+// Model answer
+/*
+function curryN(fn, n) {
+    if (typeof n !== 'number') n = fn.length;
 
-// Solution Source:
-// http://benalman.com/news/2012/09/partial-application-in-javascript/#manually-specifying-function-arity
+    function getCurriedFn(prev) {
+        return function(arg) {
+            var args = prev.concat(arg);
+
+            if (args.length < n)
+                return getCurriedFn(args);
+            else
+                return fn.apply(this, args)
+        };
+    }
+
+    return getCurriedFn([])
+}
+*/
+//Solution Source:
+//http://benalman.com/news/2012/09/partial-application-in-javascript/#manually-specifying-function-arity
+

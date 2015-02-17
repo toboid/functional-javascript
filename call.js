@@ -1,6 +1,6 @@
 function duckCount() {
-    if(!arguments.length) return 0
-    var result = Object.hasOwnProperty.call(arguments[0], 'quack') ? 1 : 0
+    if(!arguments.length) return 0;
+    var result = Object.hasOwnProperty.call(arguments[0], 'quack') ? 1 : 0;
     return duckCount.apply(null, [].slice.call(arguments, 1)) + result
 }
 

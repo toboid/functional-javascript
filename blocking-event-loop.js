@@ -1,11 +1,11 @@
 function repeat(operation, num) {
-    if (num <= 0) return
+    if (num <= 0) return;
 
-    setImmediate(operation)
+    operation();
     setImmediate(repeat.bind(null, operation, --num))
 }
 
-// Model answer
+// Model answer - will be faster as not async on every call
 /*
 function repeat(operation, num) {
     if (num <= 0) return
