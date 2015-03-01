@@ -2,7 +2,7 @@ function repeat(operation, num) {
     if (num <= 0) return;
 
     operation();
-    setImmediate(repeat.bind(null, operation, --num))
+    setImmediate(repeat.bind(null, operation, --num));
 }
 
 // Model answer - will be faster as not async on every call
@@ -22,4 +22,4 @@ function repeat(operation, num) {
 }
 */
 
-module.exports = repeat
+module.exports = repeat;
